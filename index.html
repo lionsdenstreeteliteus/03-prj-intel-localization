@@ -14,18 +14,19 @@
 </head>
 <body>
 
+  <!-- Language Switcher Button -->
+  <div style="position: fixed; top: 16px; right: 16px; z-index: 1050;">
+    <button id="langSwitcher" class="btn btn-outline-primary btn-sm" aria-label="Switch language">English</button>
+  </div>
+
   <!-- Header / Hero Section -->
   <header>
     <div>
       <!-- Ask Copilot to teach you about `.svg`. 🙂 You'll need to resize the logo with CSS. -->
       <img src="img/intel-header-logo.svg" alt="Intel Logo" />
       <!-- Main Heading -->
-      <h1>
-        Sustainability Through the Ages
-      </h1>
-
-      <!-- Subheading / Description -->
-      <p>
+      <h1 id="mainTitle">Sustainability Through the Ages</h1>
+      <p id="mainDesc">
         Explore Intel's journey through time, discovering how our commitment
         to innovation has shaped a more sustainable future for technology 
         and our planet.
@@ -39,10 +40,9 @@
     <!-- Card 1: 1968 -->
     <div>
       <h2>1968</h2>
-      <h3>Intel Founded</h3>
-      <!-- Image placeholder -->
+      <h3 id="card1Title">Intel Founded</h3>
       <img src="img/1.jpg" alt="1968 placeholder image" style="width:100px;height:auto;" />
-      <p>
+      <p id="card1Desc">
         Robert Noyce and Gordon Moore rename the newly formed company 
         NM Electronics to Intel Corporation, laying the foundation for 
         decades of technological innovation.
@@ -52,10 +52,9 @@
     <!-- Card 2: 1971 -->
     <div>
       <h2>1971</h2>
-      <h3>First Microprocessor</h3>
-      <!-- Image placeholder -->
+      <h3 id="card2Title">First Microprocessor</h3>
       <img src="img/2.jpg" alt="1971 placeholder image" style="width:100px;height:auto;" />
-      <p>
+      <p id="card2Desc">
         Intel debuts the 4004, the world's first commercial microprocessor, 
         igniting the microprocessor revolution and propelling the future 
         of computing devices.
@@ -65,10 +64,9 @@
     <!-- Card 3: 1978 -->
     <div>
       <h2>1978</h2>
-      <h3>8086 Processor</h3>
-      <!-- Image placeholder -->
+      <h3 id="card3Title">8086 Processor</h3>
       <img src="img/3.jpg" alt="1978 placeholder image" style="width:100px;height:auto;" />
-      <p>
+      <p id="card3Desc">
         Launch of the 8086 processor, establishing the x86 architecture 
         that drives countless PCs and servers in the modern era.
       </p>
@@ -77,10 +75,9 @@
     <!-- Card 4: 1985 -->
     <div>
       <h2>1985</h2>
-      <h3>386 Processor</h3>
-      <!-- Image placeholder -->
+      <h3 id="card4Title">386 Processor</h3>
       <img src="img/4.jpg" alt="1985 placeholder image" style="width:100px;height:auto;" />
-      <p>
+      <p id="card4Desc">
         Intel introduces the 386 processor with 32-bit architecture, 
         ushering in a new era of performance and multitasking for 
         personal computers.
@@ -90,10 +87,9 @@
     <!-- Card 5: 2006 -->
     <div>
       <h2>2006</h2>
-      <h3>Peak GHG Emissions</h3>
-      <!-- Image placeholder -->
+      <h3 id="card5Title">Peak GHG Emissions</h3>
       <img src="img/Blog-Feature-Image-How-AI-is-transforming.webp" alt="2006 placeholder image" style="width:100px;height:auto;" />
-      <p>
+      <p id="card5Desc">
         This year marks Intel's highest annual greenhouse gas emissions 
         for operations. Over subsequent years, Intel invests heavily in 
         chemical abatement, renewable energy, and energy-efficient 
@@ -104,10 +100,9 @@
     <!-- Card 6: 2020 -->
     <div>
       <h2>2020</h2>
-      <h3>RISE Strategy</h3>
-      <!-- Image placeholder -->
+      <h3 id="card6Title">RISE Strategy</h3>
       <img src="img/ESG.jpg" alt="2020 placeholder image" style="width:100px;height:auto;" />
-      <p>
+      <p id="card6Desc">
         Intel launches its RISE (Responsible, Inclusive, Sustainable, 
         Enabling) strategy and 2030 goals, aiming to drive industry-wide 
         progress on climate action, water stewardship, and waste reduction.
@@ -117,10 +112,9 @@
     <!-- Card 7: 2022 -->
     <div>
       <h2>2022</h2>
-      <h3>Net-Zero By 2040</h3>
-      <!-- Image placeholder -->
+      <h3 id="card7Title">Net-Zero By 2040</h3>
       <img src="img/OIP.jpeg" alt="2022 placeholder image" style="width:100px;height:auto;" />
-      <p>
+      <p id="card7Desc">
         Intel announces its commitment to achieve net-zero greenhouse 
         gas emissions (Scope 1 and 2) across its global operations 
         by 2040, building on years of environmental initiatives.
@@ -130,10 +124,9 @@
     <!-- Card 8: 2023 -->
     <div>
       <h2>2023</h2>
-      <h3>Renewable Electricity</h3>
-      <!-- Image placeholder -->
+      <h3 id="card8Title">Renewable Electricity</h3>
       <img src="img/Blog-Feature-Image-How-AI-is-transforming.webp" alt="2023 placeholder image" style="width:100px;height:auto;" />
-      <p>
+      <p id="card8Desc">
         The company achieves 99% renewable electricity usage worldwide, 
         helping to drastically lower carbon emissions and driving progress 
         toward Intel's long-term sustainability goals.
@@ -143,10 +136,9 @@
     <!-- Card 9: 2024 -->
     <div>
       <h2>2024</h2>
-      <h3>Sustainability Summit</h3>
-      <!-- Image placeholder -->
+      <h3 id="card9Title">Sustainability Summit</h3>
       <img src="img/DSC_4147A-1024x534.webp" alt="2024 placeholder image" style="width:100px;height:auto;" />
-      <p>
+      <p id="card9Desc">
         Intel hosts its first Sustainability Summit, uniting suppliers, 
         government officials, and industry leaders to collaborate on 
         next-generation sustainable semiconductor manufacturing.
@@ -154,6 +146,7 @@
     </div>
   </section>
   <p>Scroll to view timeline | Hover over cards to learn more!</p>
+  <p id="timelineNote">Scroll to view timeline | Hover over cards to learn more!</p>
 
   <!-- New Three-Column Section (Bootstrap Grid) -->
   <section class="container my-5">
@@ -161,22 +154,22 @@
       <!-- Column 1 -->
       <div class="col-md-4 mb-4">
         <div class="p-3 border bg-light h-100">
-          <h3>العنوان الأول</h3>
-          <p>هذا نص توضيحي للعمود الأول. يمكنك وضع أي محتوى هنا.</p>
+          <h3 id="col1Title">العنوان الأول</h3>
+          <p id="col1Text">هذا نص توضيحي للعمود الأول. يمكنك وضع أي محتوى هنا.</p>
         </div>
       </div>
       <!-- Column 2 -->
       <div class="col-md-4 mb-4">
         <div class="p-3 border bg-light h-100">
-          <h3>العنوان الثاني</h3>
-          <p>هذا نص توضيحي للعمود الثاني. يمكنك وضع أي محتوى هنا.</p>
+          <h3 id="col2Title">العنوان الثاني</h3>
+          <p id="col2Text">هذا نص توضيحي للعمود الثاني. يمكنك وضع أي محتوى هنا.</p>
         </div>
       </div>
       <!-- Column 3 -->
       <div class="col-md-4 mb-4">
         <div class="p-3 border bg-light h-100">
-          <h3>العنوان الثالث</h3>
-          <p>هذا نص توضيحي للعمود الثالث. يمكنك وضع أي محتوى هنا.</p>
+          <h3 id="col3Title">العنوان الثالث</h3>
+          <p id="col3Text">هذا نص توضيحي للعمود الثالث. يمكنك وضع أي محتوى هنا.</p>
         </div>
       </div>
     </div>
@@ -188,13 +181,13 @@
   <div class="row justify-content-center">
     <div class="col-md-8 col-lg-6">
       <form class="p-4 border rounded bg-white shadow-sm" aria-label="Subscribe to Intel Sustainability Newsletter">
-        <h2 class="mb-3 text-center">اشترك في نشرتنا الإخبارية للاستدامة</h2>
+        <h2 id="newsletterTitle" class="mb-3 text-center">اشترك في نشرتنا الإخبارية للاستدامة</h2>
         <div class="mb-3">
-          <label for="subscriberEmail" class="form-label">البريد الإلكتروني</label>
+          <label id="emailLabel" for="subscriberEmail" class="form-label">البريد الإلكتروني</label>
           <input type="email" class="form-control" id="subscriberEmail" name="email" placeholder="أدخل بريدك الإلكتروني" required aria-required="true" aria-describedby="emailHelp">
           <div id="emailHelp" class="form-text">لن نشارك بريدك مع أي طرف ثالث.</div>
         </div>
-        <button type="submit" class="btn btn-primary w-100">اشترك الآن</button>
+        <button id="subscribeBtn" type="submit" class="btn btn-primary w-100">اشترك الآن</button>
       </form>
     </div>
   </div>
@@ -207,12 +200,15 @@
       <ul class="list-inline mb-2 d-flex flex-wrap justify-content-center gap-3">
         <li class="list-inline-item">
           <a href="#" class="text-decoration-underline" style="color: #ffd700; font-size: 1.1rem; padding: 10px 16px; display: inline-block; min-width: 48px; min-height: 48px;">سياسة الخصوصية</a>
+          <a id="privacyLink" href="#" class="text-decoration-underline" style="color: #ffd700; font-size: 1.1rem; padding: 10px 16px; display: inline-block; min-width: 48px; min-height: 48px;">سياسة الخصوصية</a>
         </li>
         <li class="list-inline-item">
           <a href="#" class="text-decoration-underline" style="color: #ffd700; font-size: 1.1rem; padding: 10px 16px; display: inline-block; min-width: 48px; min-height: 48px;">شروط الاستخدام</a>
+          <a id="termsLink" href="#" class="text-decoration-underline" style="color: #ffd700; font-size: 1.1rem; padding: 10px 16px; display: inline-block; min-width: 48px; min-height: 48px;">شروط الاستخدام</a>
         </li>
         <li class="list-inline-item">
           <a href="#" class="text-decoration-underline" style="color: #ffd700; font-size: 1.1rem; padding: 10px 16px; display: inline-block; min-width: 48px; min-height: 48px;">اتصل بنا</a>
+          <a id="contactLink" href="#" class="text-decoration-underline" style="color: #ffd700; font-size: 1.1rem; padding: 10px 16px; display: inline-block; min-width: 48px; min-height: 48px;">اتصل بنا</a>
         </li>
       </ul>
     </nav>
@@ -237,13 +233,18 @@
     <div class="modal-content">
       <div class="modal-header">
         <h5 class="modal-title" id="infoModalLabel">مبادرات الاستدامة في إنتل</h5>
+  <h5 class="modal-title" id="infoModalLabel">مبادرات الاستدامة في إنتل</h5>
         <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
       </div>
       <div class="modal-body">
-        تلتزم إنتل بتحقيق صافي انبعاثات صفرية بحلول عام 2040، وتستخدم الكهرباء المتجددة بنسبة 99% حول العالم.
+  <span id="modalText">تلتزم إنتل بتحقيق صافي انبعاثات صفرية بحلول عام 2040، وتستخدم الكهرباء المتجددة بنسبة 99% حول العالم.</span>
       </div>
       <div class="modal-footer">
         <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">إغلاق</button>
+  <button id="closeModalBtn" type="button" class="btn btn-secondary" data-bs-dismiss="modal">إغلاق</button>
+  <button id="moreInfoBtn" type="button" class="btn btn-info" data-bs-toggle="modal" data-bs-target="#infoModal">
+    المزيد عن استدامة إنتل
+  </button>
       </div>
     </div>
   </div>
@@ -251,9 +252,9 @@
 
 <!-- Language Auto-Detection & RTL/LTR Script -->
 <script>
-// This script checks the document language and applies RTL or LTR as needed
+// Language and direction handling + language switcher
 function updateDirection() {
-  const rtlLangs = ['ar', 'he', 'fa', 'ur']; // Add more RTL language codes as needed
+  const rtlLangs = ['ar', 'he', 'fa', 'ur'];
   const html = document.documentElement;
   const lang = html.lang || navigator.language || 'en';
   if (rtlLangs.some(code => lang.startsWith(code))) {
@@ -265,8 +266,106 @@ function updateDirection() {
   }
 }
 
-// Run on load
+function setLanguage(lang) {
+  document.documentElement.lang = lang;
+  updateDirection();
+  // Update all UI text
+  if (lang === 'en') {
+    document.getElementById('langSwitcher').textContent = 'العربية';
+    document.getElementById('mainTitle').textContent = 'Sustainability Through the Ages';
+    document.getElementById('mainDesc').textContent = "Explore Intel's journey through time, discovering how our commitment to innovation has shaped a more sustainable future for technology and our planet.";
+    document.getElementById('col1Title').textContent = 'First Title';
+    document.getElementById('col1Text').textContent = 'This is the first column. You can put any content here.';
+    document.getElementById('col2Title').textContent = 'Second Title';
+    document.getElementById('col2Text').textContent = 'This is the second column. You can put any content here.';
+    document.getElementById('col3Title').textContent = 'Third Title';
+    document.getElementById('col3Text').textContent = 'This is the third column. You can put any content here.';
+    document.getElementById('newsletterTitle').textContent = 'Subscribe to our Sustainability Newsletter';
+    document.getElementById('emailLabel').textContent = 'Email Address';
+    document.getElementById('subscriberEmail').placeholder = 'Enter your email';
+    document.getElementById('emailHelp').textContent = "We'll never share your email with anyone else.";
+    document.getElementById('subscribeBtn').textContent = 'Subscribe Now';
+    document.getElementById('privacyLink').textContent = 'Privacy Policy';
+    document.getElementById('termsLink').textContent = 'Terms of Use';
+    document.getElementById('contactLink').textContent = 'Contact Us';
+    document.getElementById('infoModalLabel').textContent = 'Intel Sustainability Initiatives';
+    document.getElementById('modalText').textContent = 'Intel is committed to achieving net-zero emissions by 2040 and uses 99% renewable electricity worldwide.';
+    document.getElementById('closeModalBtn').textContent = 'Close';
+    document.getElementById('moreInfoBtn').textContent = 'More about Intel Sustainability';
+    document.getElementById('timelineNote').textContent = 'Scroll to view timeline | Hover over cards to learn more!';
+    // Timeline cards
+    document.getElementById('card1Title').textContent = 'Intel Founded';
+    document.getElementById('card1Desc').textContent = 'Robert Noyce and Gordon Moore rename the newly formed company NM Electronics to Intel Corporation, laying the foundation for decades of technological innovation.';
+    document.getElementById('card2Title').textContent = 'First Microprocessor';
+    document.getElementById('card2Desc').textContent = "Intel debuts the 4004, the world's first commercial microprocessor, igniting the microprocessor revolution and propelling the future of computing devices.";
+    document.getElementById('card3Title').textContent = '8086 Processor';
+    document.getElementById('card3Desc').textContent = 'Launch of the 8086 processor, establishing the x86 architecture that drives countless PCs and servers in the modern era.';
+    document.getElementById('card4Title').textContent = '386 Processor';
+    document.getElementById('card4Desc').textContent = 'Intel introduces the 386 processor with 32-bit architecture, ushering in a new era of performance and multitasking for personal computers.';
+    document.getElementById('card5Title').textContent = 'Peak GHG Emissions';
+    document.getElementById('card5Desc').textContent = "This year marks Intel's highest annual greenhouse gas emissions for operations. Over subsequent years, Intel invests heavily in chemical abatement, renewable energy, and energy-efficient manufacturing to reverse this trend.";
+    document.getElementById('card6Title').textContent = 'RISE Strategy';
+    document.getElementById('card6Desc').textContent = "Intel launches its RISE (Responsible, Inclusive, Sustainable, Enabling) strategy and 2030 goals, aiming to drive industry-wide progress on climate action, water stewardship, and waste reduction.";
+    document.getElementById('card7Title').textContent = 'Net-Zero By 2040';
+    document.getElementById('card7Desc').textContent = "Intel announces its commitment to achieve net-zero greenhouse gas emissions (Scope 1 and 2) across its global operations by 2040, building on years of environmental initiatives.";
+    document.getElementById('card8Title').textContent = 'Renewable Electricity';
+    document.getElementById('card8Desc').textContent = "The company achieves 99% renewable electricity usage worldwide, helping to drastically lower carbon emissions and driving progress toward Intel's long-term sustainability goals.";
+    document.getElementById('card9Title').textContent = 'Sustainability Summit';
+    document.getElementById('card9Desc').textContent = "Intel hosts its first Sustainability Summit, uniting suppliers, government officials, and industry leaders to collaborate on next-generation sustainable semiconductor manufacturing.";
+  } else {
+    document.getElementById('langSwitcher').textContent = 'English';
+    document.getElementById('mainTitle').textContent = 'الاستدامة عبر العصور';
+    document.getElementById('mainDesc').textContent = "استكشف رحلة إنتل عبر الزمن، واكتشف كيف شكل التزامنا بالابتكار مستقبلاً أكثر استدامة للتكنولوجيا وكوكبنا.";
+    document.getElementById('col1Title').textContent = 'العنوان الأول';
+    document.getElementById('col1Text').textContent = 'هذا نص توضيحي للعمود الأول. يمكنك وضع أي محتوى هنا.';
+    document.getElementById('col2Title').textContent = 'العنوان الثاني';
+    document.getElementById('col2Text').textContent = 'هذا نص توضيحي للعمود الثاني. يمكنك وضع أي محتوى هنا.';
+    document.getElementById('col3Title').textContent = 'العنوان الثالث';
+    document.getElementById('col3Text').textContent = 'هذا نص توضيحي للعمود الثالث. يمكنك وضع أي محتوى هنا.';
+    document.getElementById('newsletterTitle').textContent = 'اشترك في نشرتنا الإخبارية للاستدامة';
+    document.getElementById('emailLabel').textContent = 'البريد الإلكتروني';
+    document.getElementById('subscriberEmail').placeholder = 'أدخل بريدك الإلكتروني';
+    document.getElementById('emailHelp').textContent = 'لن نشارك بريدك مع أي طرف ثالث.';
+    document.getElementById('subscribeBtn').textContent = 'اشترك الآن';
+    document.getElementById('privacyLink').textContent = 'سياسة الخصوصية';
+    document.getElementById('termsLink').textContent = 'شروط الاستخدام';
+    document.getElementById('contactLink').textContent = 'اتصل بنا';
+    document.getElementById('infoModalLabel').textContent = 'مبادرات الاستدامة في إنتل';
+    document.getElementById('modalText').textContent = 'تلتزم إنتل بتحقيق صافي انبعاثات صفرية بحلول عام 2040، وتستخدم الكهرباء المتجددة بنسبة 99% حول العالم.';
+    document.getElementById('closeModalBtn').textContent = 'إغلاق';
+    document.getElementById('moreInfoBtn').textContent = 'المزيد عن استدامة إنتل';
+    document.getElementById('timelineNote').textContent = 'مرر لعرض الجدول الزمني | مرر فوق البطاقات لمعرفة المزيد!';
+    // Timeline cards
+    document.getElementById('card1Title').textContent = 'تأسيس إنتل';
+    document.getElementById('card1Desc').textContent = 'روبرت نويس وجوردون مور يغيران اسم الشركة الجديدة من NM Electronics إلى إنتل، مما يمهد الطريق لعقود من الابتكار التكنولوجي.';
+    document.getElementById('card2Title').textContent = 'أول معالج دقيق';
+    document.getElementById('card2Desc').textContent = 'تطلق إنتل 4004، أول معالج دقيق تجاري في العالم، مما يشعل ثورة المعالجات الدقيقة ويدفع مستقبل أجهزة الحوسبة.';
+    document.getElementById('card3Title').textContent = 'معالج 8086';
+    document.getElementById('card3Desc').textContent = 'إطلاق معالج 8086، الذي أسس معمارية x86 التي تشغل العديد من أجهزة الكمبيوتر والخوادم في العصر الحديث.';
+    document.getElementById('card4Title').textContent = 'معالج 386';
+    document.getElementById('card4Desc').textContent = 'تقدم إنتل معالج 386 بهندسة 32 بت، مما يدشن عصرًا جديدًا من الأداء وتعدد المهام لأجهزة الكمبيوتر الشخصية.';
+    document.getElementById('card5Title').textContent = 'ذروة انبعاثات الغازات الدفيئة';
+    document.getElementById('card5Desc').textContent = 'يمثل هذا العام أعلى انبعاثات سنوية للغازات الدفيئة في عمليات إنتل. في السنوات التالية، تستثمر إنتل بكثافة في تقنيات المعالجة الكيميائية والطاقة المتجددة والتصنيع الموفّر للطاقة لعكس هذا الاتجاه.';
+    document.getElementById('card6Title').textContent = 'استراتيجية RISE';
+    document.getElementById('card6Desc').textContent = 'تطلق إنتل استراتيجيتها RISE (المسؤولة، الشاملة، المستدامة، الممكنة) وأهداف 2030، بهدف دفع التقدم الصناعي في العمل المناخي، وإدارة المياه، وتقليل النفايات.';
+    document.getElementById('card7Title').textContent = 'صافي صفر بحلول 2040';
+    document.getElementById('card7Desc').textContent = 'تعلن إنتل التزامها بتحقيق صافي انبعاثات صفرية (النطاق 1 و2) في عملياتها العالمية بحلول عام 2040، استنادًا إلى سنوات من المبادرات البيئية.';
+    document.getElementById('card8Title').textContent = 'الكهرباء المتجددة';
+    document.getElementById('card8Desc').textContent = 'تصل الشركة إلى استخدام 99% من الكهرباء المتجددة عالميًا، مما يساعد على خفض الانبعاثات الكربونية بشكل كبير ودفع التقدم نحو أهداف الاستدامة طويلة الأجل لإنتل.';
+    document.getElementById('card9Title').textContent = 'قمة الاستدامة';
+    document.getElementById('card9Desc').textContent = 'تستضيف إنتل أول قمة للاستدامة، تجمع الموردين والمسؤولين الحكوميين وقادة الصناعة للتعاون في تصنيع أشباه الموصلات المستدامة من الجيل القادم.';
+  }
+}
+
+// Initial language setup
 updateDirection();
+setLanguage(document.documentElement.lang || 'ar');
+
+// Language switcher event
+document.getElementById('langSwitcher').addEventListener('click', function() {
+  const currentLang = document.documentElement.lang.startsWith('ar') ? 'en' : 'ar';
+  setLanguage(currentLang);
+});
 
 // Detect language changes (e.g., by Google Translate)
 let lastLang = document.documentElement.lang;
@@ -274,9 +373,10 @@ setInterval(() => {
   const currentLang = document.documentElement.lang;
   if (currentLang !== lastLang) {
     updateDirection();
+    setLanguage(currentLang);
     lastLang = currentLang;
   }
-}, 1000); // Check every second
+}, 1000);
 </script>
 
 </html>
