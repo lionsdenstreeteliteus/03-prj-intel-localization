@@ -1,0 +1,111 @@
+/* ========== Theme ========== */
+:root{
+  --intel-blue:#0057b7;
+  --intel-blue-2:#0071c5;
+  --bg:#f4f8fb; --fg:#222; --card:#fff;
+  --shadow:0 2px 8px rgba(0,87,183,.08);
+  --shadow-lg:0 10px 30px rgba(0,87,183,.22);
+}
+*{box-sizing:border-box}
+html,body{height:100%}
+body{font-family:Arial, sans-serif;margin:0;background:var(--bg);color:var(--fg)}
+
+/* Header (unchanged) */
+header{background:var(--intel-blue);color:#fff;text-align:center;padding:2rem 1rem 1rem}
+header img{width:120px;margin-bottom:1rem}
+h1{margin:.5rem 0} header p{font-size:1.1rem;margin-top:.5rem}
+
+/* Timeline container — works with <section> or <section class="timeline"> */
+section, .timeline{
+  max-width:1100px; margin:2rem auto; padding:0 1rem 1rem;
+  display:flex; flex-direction:column; gap:1rem; /* mobile-first: vertical stack */
+}
+section > h2, .timeline > h2{
+  text-align:center; color:var(--intel-blue); margin:0 0 1rem; font-size:1.5rem;
+}
+
+/* Card base */
+.timeline > .card, section > div{
+  background:var(--card); border-radius:12px; box-shadow:var(--shadow);
+  padding:1.25rem; position:relative; cursor:pointer; outline:none;
+  transition:transform .35s cubic-bezier(.22,.61,.36,1), box-shadow .35s, background .35s, filter .35s;
+  transform:translateY(0) scale(1);
+  will-change:transform, box-shadow, background, filter;
+}
+
+/* Hover/focus transforms (CSS Transforms + polish) */
+.timeline > .card:hover, section > div:hover{
+  transform:translateY(-8px) scale(1.02);
+  box-shadow:var(--shadow-lg);
+  background:#e6f0fa;
+  filter:saturate(1.02);
+}
+.timeline > .card:focus-visible,
+.timeline > .card:focus-within,
+section > div:focus-visible,
+section > div:focus-within{
+  box-shadow:0 0 0 3px rgba(0,113,197,.35), var(--shadow-lg);
+}
+
+/* Card typography & images */
+section h2, section h3, .timeline h2, .timeline h3{margin-top:0}
+section h3, .timeline h3{color:var(--intel-blue-2);font-size:1.1rem}
+section p, .timeline p{font-size:1rem;margin:.5rem 0 0}
+section img, .timeline img{
+  display:block; margin:.5rem auto; width:100%; max-width:260px;
+  border-radius:8px; aspect-ratio:4/3; object-fit:cover;
+  /* Add a border for better contrast */
+  border: 2px solid #0071c5;
+}
+
+/* Reveal-on-hover section inside each card */
+.timeline .extra, section > div .extra{
+  max-height:0; opacity:0; overflow:hidden; transform:translateY(6px);
+  transition:max-height .35s ease, opacity .25s ease, transform .25s ease;
+}
+.timeline > .card:hover .extra,
+.timeline > .card:focus-within .extra,
+section > div:hover .extra,
+section > div:focus-within .extra{
+  max-height:240px; opacity:1; transform:none;
+}
+
+/* Horizontal scroll + scroll-snap on large screens (Scroll Snap Effect) */
+@media (min-width:768px){
+  section, .timeline{
+    flex-direction:row; align-items:stretch; gap:1rem;
+    overflow-x:auto; overflow-y:visible;
+    scroll-snap-type:x mandatory; scroll-padding-inline:1rem;
+    -webkit-overflow-scrolling:touch;
+  }
+  /* Keep heading as a full-width lead item if present */
+  section > h2, .timeline > h2{flex:0 0 100%; margin:1rem 0 .5rem}
+  .timeline > .card, section > div{
+    flex:0 0 clamp(280px, 30vw, 360px);
+    scroll-snap-align:center; scroll-snap-stop:always;
+  }
+  /* Pretty scrollbar */
+  section::-webkit-scrollbar, .timeline::-webkit-scrollbar{height:10px}
+  section::-webkit-scrollbar-track, .timeline::-webkit-scrollbar-track{background:#e9f1fb;border-radius:999px}
+  section::-webkit-scrollbar-thumb, .timeline::-webkit-scrollbar-thumb{
+    background:linear-gradient(90deg, var(--intel-blue), var(--intel-blue-2)); border-radius:999px;
+  }
+  section, .timeline{scrollbar-color:var(--intel-blue) #e9f1fb; scrollbar-width:thin}
+}
+
+/* Small-screen tweaks */
+@media (max-width:600px){
+  header img{width:80px} h1{font-size:1.3rem}
+  section > h2, .timeline > h2{font-size:1.1rem}
+  section h3, .timeline h3{font-size:1rem}
+  .timeline > .card, section > div{padding:1rem;font-size:.95rem}
+}
+
+/* Reduced motion */
+@media (prefers-reduced-motion:reduce){
+  *{transition:none !important}
+  .timeline > .card:hover, section > div:hover{transform:none}
+}
+
+/* Footer (optional) */
+footer{background:var(--intel-blue);color:#fff;text-align:center;padding:1rem 0;margin-top:2rem}
