@@ -201,16 +201,22 @@
 </section>
 
 <!-- Footer (Bootstrap, Accessible) -->
-<footer class="mt-5">
-  <div class="container">
+<footer class="mt-5" style="background: #222; color: #fff;">
+  <div class="container py-3">
     <nav aria-label="Footer navigation">
-      <ul class="list-inline mb-2">
-        <li class="list-inline-item"><a href="#" class="text-white text-decoration-underline">سياسة الخصوصية</a></li>
-        <li class="list-inline-item"><a href="#" class="text-white text-decoration-underline">شروط الاستخدام</a></li>
-        <li class="list-inline-item"><a href="#" class="text-white text-decoration-underline">اتصل بنا</a></li>
+      <ul class="list-inline mb-2 d-flex flex-wrap justify-content-center gap-3">
+        <li class="list-inline-item">
+          <a href="#" class="text-decoration-underline" style="color: #ffd700; font-size: 1.1rem; padding: 10px 16px; display: inline-block; min-width: 48px; min-height: 48px;">سياسة الخصوصية</a>
+        </li>
+        <li class="list-inline-item">
+          <a href="#" class="text-decoration-underline" style="color: #ffd700; font-size: 1.1rem; padding: 10px 16px; display: inline-block; min-width: 48px; min-height: 48px;">شروط الاستخدام</a>
+        </li>
+        <li class="list-inline-item">
+          <a href="#" class="text-decoration-underline" style="color: #ffd700; font-size: 1.1rem; padding: 10px 16px; display: inline-block; min-width: 48px; min-height: 48px;">اتصل بنا</a>
+        </li>
       </ul>
     </nav>
-    <div>&copy; 2025 Intel Corporation. جميع الحقوق محفوظة.</div>
+    <div class="text-center mt-2">&copy; 2025 Intel Corporation. جميع الحقوق محفوظة.</div>
   </div>
 </footer>
 
@@ -223,6 +229,10 @@
 
 <!-- Bootstrap Modal Component -->
 <div class="modal fade" id="infoModal" tabindex="-1" aria-labelledby="infoModalLabel" aria-hidden="true">
+  <!--
+    ARIA best practice: Ensure no focusable elements are visible or accessible when aria-hidden="true" is set on the modal.
+    Bootstrap's modal implementation handles this, but if you create custom modals, double-check focus management.
+  -->
   <div class="modal-dialog">
     <div class="modal-content">
       <div class="modal-header">
